@@ -15,3 +15,4 @@ for($i=0;$i<$terminis;$i++){
 	$capitalviu = $capitalviu - $capitalamortitzat;
 	echo number_format($interessos,2,",",".")." --- ".number_format($capitalviu,2,",",".")."<br>";	
 }
+?>

@@ -1,0 +1,17 @@
+<?php
+$capital = 10000;
+$periodes = 12;
+$terminis = 24;
+$interesanual = 2.2;
+$interesefectiu = $interesanual/100/$periodes;
+$numerador = $capital*$interesefectiu;
+$denominador = 1-(1+$interesefectiu)**-$terminis;
+$terme = $numerador/$denominador;
+//echo $terme;
+$capitalviu = $capital;
+for($i=0;$i<$terminis;$i++){
+	$interessos = $capitalviu * $interesefectiu;
+	$capitalamortitzat = $terme - $interessos;
+	$capitalviu = $capitalviu - $capitalamortitzat;
+	echo number_format($interessos,2,",",".")." --- ".number_format($capitalviu,2,",",".")."<br>";	
+}
